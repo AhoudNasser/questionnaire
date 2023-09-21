@@ -1,0 +1,63 @@
+
+
+
+
+<section class="background-radial-gradient overflow-hidden">
+    <style>
+      .background-radial-gradient {
+        background-color: white;
+        
+      }
+  
+      
+      .bg-glass {
+        background-color: hsla(0, 0%, 100%, 0.9) !important;
+        backdrop-filter: saturate(200%) blur(25px);
+      }
+  
+      .borderless-button {
+              background-color: #007bff; /* Button background color */
+              color: #fff; /* Button text color */
+              border: none; /* Remove the border */
+              padding: 10px 20px; /* Button padding */
+              border-radius: 5px; /* Optional border radius */
+              cursor: pointer;
+          }
+  
+      .custom-blue-button {
+      background-color: #bad4f0; /* Blue color */
+      color: #033ebf; /* White text color */
+      /* Add other styling properties as needed */
+  }
+  
+    </style>
+  
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5" class="container">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: black; font-size: 60px;">
+            Welcom to <span style="color: blue">HTML_Quiz.</span><p>Good Luck:)</p>
+          </h1>
+          <p class="mb-4 opacity-70" style="color: hsl(223, 5%, 26%); font-size: 20px;">
+            Please select user :
+          </p>
+  
+       
+        <br>
+       
+           <select [(ngModel)]="selectedUser">
+            <option *ngFor="let user of users" [value]="user.id">{{ user.name }}</option>
+           </select>
+            <button [disabled]="!selectedUser" (click)="startQuestionnaire()" >Next</button>
+        <!-- </div> -->
+        </div>
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+            <img src="\assets\images\quiz.png" height="400px" width="800px">
+            <div class="card bg-glass">
+                 
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
